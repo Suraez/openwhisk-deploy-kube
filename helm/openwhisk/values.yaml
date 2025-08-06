@@ -131,6 +131,12 @@ whisk:
         retentionMs: ""
   containerPool:
     userMemory: "2048m"
+    userCpu: "1"
+    maxConcurrent: 1
+    prewarm:
+      count: 2
+      kind: "nodejs:default"
+
   runtimes: "runtimes.json"
   durationChecker:
     timeWindow: "1 d"
